@@ -1,10 +1,15 @@
 ---
-import { ModeToggle } from "./ModeToggle";
+import noteLogo from "@/assets/notelogo.svg";
+import { NavigationActions } from "./NavigationActions";
 ---
 
-<div class="border-b border-zinc-800 w-full py-3">
-    <div class="w-full mx-auto max-w-250 flex justify-between items-center">
-        <h1>Note</h1>
-        <ModeToggle client:load />
+<div class="border-b border-zinc-800 w-full">
+    <div class="w-full mx-auto max-w-250 flex p-3 justify-between items-center">
+        <a href="/">
+            <img src={noteLogo.src} alt="Note Logo" class="h-4" />
+        </a>
+        <div>
+            <NavigationActions client:only />
+        </div>
     </div>
 </div>

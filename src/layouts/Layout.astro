@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Navigation from "@/components/Navigation.astro";
+import { Toaster } from "@/components/ui/sonner";
 ---
 
 <script is:inline>
@@ -38,8 +39,9 @@ import Navigation from "@/components/Navigation.astro";
     </head>
     <body class="bg-zinc grid grid-rows-[auto_1fr] min-h-screen">
         <Navigation />
-        <div class="w-full max-w-250 mx-auto h-full">
-            <slot class="h-full" />
+        <div class="w-full py-5 px-3 max-w-250 mx-auto h-full">
+            <slot />
         </div>
+        <Toaster client:only />
     </body>
 </html>
