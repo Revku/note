@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LinkIcon } from "lucide-react";
+import QRCode from "react-qr-code";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -50,14 +51,9 @@ export function NavigationActions() {
             <DialogTitle>Share Note</DialogTitle>
           </DialogHeader>
 
-          <p>QR CODE</p>
-
-          <DialogFooter>
-            <DialogClose asChild>
-              <Button variant="outline">Cancel</Button>
-            </DialogClose>
-            <Button type="submit">Copy image</Button>
-          </DialogFooter>
+          <div className="mx-auto p-4 my-6 bg-white rounded-md">
+            <QRCode value={window.location.href} />
+          </div>
         </DialogContent>
       </Dialog>
     </>
